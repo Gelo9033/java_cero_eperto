@@ -1,7 +1,7 @@
 public class Automovil {
     private String fabricante;
     private String modelo;
-    private String color;
+    private ColorAutomovil color;
     private double cilindraje;
     private int capaTanque = 45;
 
@@ -11,7 +11,7 @@ public class Automovil {
     public Automovil() {
     }
 
-    public Automovil(String fabricante, String modelo, String color, double cilindraje) {
+    public Automovil(String fabricante, String modelo, ColorAutomovil color, double cilindraje) {
         this.fabricante = fabricante;
         this.modelo = modelo;
         this.color = color;
@@ -34,11 +34,11 @@ public class Automovil {
         this.modelo = modelo;
     }
 
-    public String getColor() {
+    public ColorAutomovil getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(ColorAutomovil color) {
         this.color = color;
     }
 
