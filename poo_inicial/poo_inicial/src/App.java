@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        Automovil miAuto = new Automovil("Toyota", "Corola", ColorAutomovil.BLANCO, 1.8);
+        Automovil miAuto = new Automovil("Toyota", "Corola",TipoAutomovil.SEDAN, ColorAutomovil.BLANCO, 1.8);
 
        
         System.out.println(miAuto.detallesDelAuto());

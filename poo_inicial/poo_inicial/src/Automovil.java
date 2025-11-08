@@ -4,6 +4,7 @@ public class Automovil {
     private ColorAutomovil color;
     private double cilindraje;
     private int capaTanque = 45;
+    private TipoAutomovil tipo;
 
     public static final int VELOCIDAD_MAXIMA_CARRETERA = 120;
     public static final int VELOCIDAD_MAXIMA_CIUDAD = 60;
@@ -11,9 +12,10 @@ public class Automovil {
     public Automovil() {
     }
 
-    public Automovil(String fabricante, String modelo, ColorAutomovil color, double cilindraje) {
+    public Automovil(String fabricante, String modelo, TipoAutomovil tipo, ColorAutomovil color, double cilindraje) {
         this.fabricante = fabricante;
         this.modelo = modelo;
+        this.tipo=tipo;
         this.color = color;
         this.cilindraje = cilindraje;
     }
@@ -58,6 +60,10 @@ public class Automovil {
         this.capaTanque = capaTanque;
     }
 
+    public TipoAutomovil getTipo() {
+        return tipo;
+    }
+
     // public String detallesDelAuto() {
     // StringBuilder detalles = new StringBuilder();
     // detalles.append("Fabricante: "+this.fabricante+"\n");
@@ -71,6 +77,7 @@ public class Automovil {
     public String detallesDelAuto() {
         return "Fabricante: " + this.fabricante + "\n" +
                 "Modelo: " + this.modelo + "\n" +
+                "Tipo: "+this.tipo.getTipo()+" "+ this.tipo.getDescripcion()+ "\n"+
                 "Color: " + this.color + "\n" +
                 "Cilindraje: " + this.cilindraje + "\n"+
                 "Velocidad en ciudad"+ Automovil.VELOCIDAD_MAXIMA_CIUDAD+"\n"+
