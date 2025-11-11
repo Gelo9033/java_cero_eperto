@@ -9,9 +9,9 @@ import org.lfgelo.factura.modelo.Producto;
 
 public class PruebaFactura {
     public static void main(String[] args) {
+        Scanner scanner= new Scanner(System.in);
         Cliente cliente= new Cliente("Luis Guaman", "Quito", "0987654321", "geelo@outlook.com");
         Factura factura= new Factura("Factura de compra", cliente);
-        Scanner scanner= new Scanner(System.in);
 
         Producto producto;
         String nombre;
