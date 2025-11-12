@@ -33,4 +33,18 @@ public class AlumnoInternacional extends Alumno{
         this.notaIdiomas = notaIdiomas;
     }
 
+    @Override
+    public String saludar() {
+        String saludar= super.saludar();
+       return saludar+"soy un alumno internacional";
+    }
+
+
+    @Override
+    public double calcularPromedio() {
+        return (super.calcularPromedio()+this.notaIdiomas)/4;
+    }
+
+    
+
 }

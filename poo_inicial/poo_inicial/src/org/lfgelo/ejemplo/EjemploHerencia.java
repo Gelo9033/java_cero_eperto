@@ -4,7 +4,7 @@ import org.lfgelo.pooherencia.*;
 
 public class EjemploHerencia {
     public static void main(String[] args) {
-        Alumno alumno =new Alumno("Luis Felipe", "Gelo");
+        Alumno alumno =new Alumno("Luis Felipe", "Gelo",25,"UTPL",8.5,7.0,9.0);
         
 
         Profesor profesor = new Profesor("Ana Maria", "Lopez");
@@ -27,7 +27,7 @@ public class EjemploHerencia {
         //                    "\nNota Historia: " + alumnoInt.getNotaHistoria()
         //                    );
         
-        imprimirPersona(profesor);
+        imprimirPersona(alumno);
         
 
     }
@@ -51,12 +51,18 @@ public class EjemploHerencia {
                 System.out.println("\n Nota de Historia: " + ((Alumno) persona).getNotaHistoria());
                 System.out.println("\n Nota de Lenguaje: " + ((Alumno) persona).getNotaLenguaje());
             }
+            System.out.println("============== sobre escritura promedio ===============");
+            System.out.println("Promedio: " + ((Alumno) persona).calcularPromedio());
+            System.out.println("============== sobre escritura promedio ===============");
         }
 
         if (persona instanceof Profesor) {
             System.out.println("\n-- Es un profesor --");
             System.out.println("Es profesor de: " + ((Profesor) persona).getMateria());
         }
+        System.out.println("============== sobre escritura saludar ===============");
+        System.out.println(persona.saludar());
+        System.out.println("=============================");
     }
 }
 

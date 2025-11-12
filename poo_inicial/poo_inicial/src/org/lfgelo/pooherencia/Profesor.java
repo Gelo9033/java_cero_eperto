@@ -25,5 +25,9 @@ public class Profesor extends Persona {
         this.materia = materia;
     }
 
-    
+    @Override
+    public String saludar() {
+        String saludar= super.saludar();
+       return saludar+"soy un profesor";
+    }
 }
