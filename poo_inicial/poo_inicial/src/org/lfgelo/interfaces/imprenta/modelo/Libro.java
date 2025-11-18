@@ -22,12 +22,12 @@ public class Libro implements Imprimible {
     }
 
     public String imprimir(){
-        StringBuilder sb = new StringBuilder("Titulo: ");
+        StringBuilder sb = new StringBuilder("Titulo de libro: ");
         sb.append(this.titulo).append("\n");
         sb.append("Autor: ").append(this.autor).append("\n");
         sb.append("Genero: ").append(this.genero).append("\n");
         for(Imprimible pagina : this.paginas){
-            sb.append(pagina.imprimir()).append("\n");
+            sb.append("Título de pagina: "+pagina.imprimir()).append("\n");
         }
         return sb.toString();
     }
